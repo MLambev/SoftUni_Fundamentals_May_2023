@@ -1,0 +1,5 @@
+first_name = input()
+second_name = input()
+space = input()
+
+print(f"{first_name}{space}{second_name}")
