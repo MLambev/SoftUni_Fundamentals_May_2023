@@ -1,0 +1,25 @@
+def check_username_length(username):
+    if 3 <= len(username) <= 16:
+        return True
+    return False
+
+def check_username_symbols(username):
+    for character in username:
+        if not (character.isalnum() or character == '_' or character == '-'):
+            return False
+    return True
+
+def check_username_spaces(username):
+    if " " in username:
+        return False
+    return True
+
+def username_validator(username):
+    if check_username_length(username) and check_username_symbols(username) and check_username_spaces(username):
+        return True
+    return False
+
+usernames = input().split(', ')
+for username in usernames:
+    if username_validator(username):
+        print(f"{username}")
