@@ -1,0 +1,22 @@
+number_list = input().split(", ")
+
+positive_numbers = []
+negative_numbers = []
+even_numbers = []
+odd_numbers = []
+
+for number in number_list:
+    if int(number) >= 0:
+        positive_numbers.append(number)
+    if int(number) < 0:
+        negative_numbers.append(number)
+    if int(number) % 2 == 0:
+        even_numbers.append(number)
+    if int(number) % 2 != 0:
+        odd_numbers.append(number)
+
+
+print(f"Positive: {', '.join(positive_numbers)}")
+print(f"Negative: {', '.join(negative_numbers)}")
+print(f"Even: {', '.join(even_numbers)}")
+print(f"Odd: {', '.join(odd_numbers)}")
