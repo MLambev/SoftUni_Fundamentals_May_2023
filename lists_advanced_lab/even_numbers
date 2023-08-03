@@ -1,0 +1,8 @@
+starting_string = list(map(int, input().split(", ")))
+
+sorting_indices = map(lambda x: x if starting_string[x] % 2 == 0 else "False", range(len(starting_string)))
+
+list_of_even_numbers = list(filter(lambda a: a != "False", sorting_indices))
+
+print(list_of_even_numbers)
+
