@@ -1,0 +1,14 @@
+def even_numbers(number):
+    if number % 2 == 0:
+        return number
+
+
+numbers_string = input().split()
+numbers_digits = []
+
+for number in numbers_string:
+    numbers_digits.append(int(number))
+
+result = list(filter(even_numbers, numbers_digits))
+
+print(result)
