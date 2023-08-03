@@ -1,0 +1,37 @@
+inventory = {"shards": 0, "fragments": 0, "motes": 0}
+
+obtained = False
+
+farming_items = input().split()
+
+while not obtained:
+    for index in range(0, len(farming_items), 2):
+        quantity = int(farming_items[index])
+        key = farming_items[index + 1].lower()
+
+        if key not in inventory.keys():
+            inventory[key] = 0
+        inventory[key] += quantity
+
+        if inventory["shards"] >= 250:
+            print("Shadowmourne obtained!")
+            inventory["shards"] -= 250
+            obtained = True
+        elif inventory["fragments"] >= 250:
+            print("Valanyr obtained!")
+            inventory["fragments"] -= 250
+            obtained = True
+        elif inventory["motes"] >= 250:
+            print("Dragonwrath obtained!")
+            inventory["motes"] -= 250
+            obtained = True
+
+        if obtained:
+            break
+
+    if obtained:
+        break
+    farming_items = input().split()
+
+for material, quantity in inventory.items():
+    print(f"{material}: {quantity}")
