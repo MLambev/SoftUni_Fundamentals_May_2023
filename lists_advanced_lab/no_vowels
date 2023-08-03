@@ -1,0 +1,4 @@
+starting_list = input()
+no_vowels_list = [letter for letter in starting_list if letter.lower() not in ["a", "o", "u", "e", "i"]]
+
+print("".join(no_vowels_list))
