@@ -1,0 +1,21 @@
+number_of_electrons = int(input())
+shell = 0
+
+filled_shells = []
+
+while number_of_electrons > 0:
+    shell += 1
+    shell_capacity = 2 * (shell ** 2)
+
+    if shell_capacity >= 0:
+        left_electrons = number_of_electrons - shell_capacity
+
+        if left_electrons < 0:
+            filled_shells.append(number_of_electrons)
+            break
+
+        electrons = number_of_electrons - left_electrons
+        filled_shells.append(electrons)
+        number_of_electrons -= electrons
+
+print(filled_shells)
