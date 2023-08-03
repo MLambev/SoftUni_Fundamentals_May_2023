@@ -1,0 +1,21 @@
+n = int(input())
+positive_counter = 0
+sum_of_negatives = 0
+positive_numbers = []
+negative_numbers = []
+
+for digit in range(n):
+    digit = int(input())
+
+    if digit >= 0:
+      positive_counter += 1
+
+      positive_numbers.append(digit)
+    else:
+      sum_of_negatives += digit
+      negative_numbers.append(digit)
+
+print(f"{positive_numbers}")
+print(f"{negative_numbers}")
+print(f"Count of positives: {positive_counter}")
+print(f"Sum of negatives: {sum_of_negatives}")
