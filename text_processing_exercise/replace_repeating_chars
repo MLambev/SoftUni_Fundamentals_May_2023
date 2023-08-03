@@ -1,0 +1,11 @@
+text = input()
+
+last_symbol = ''
+shorter_text = ''
+
+for symbol in text:
+    if symbol != last_symbol:
+        shorter_text += symbol
+        last_symbol = symbol
+
+print(shorter_text)
