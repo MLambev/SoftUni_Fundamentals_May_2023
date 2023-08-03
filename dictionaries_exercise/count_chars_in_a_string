@@ -1,0 +1,11 @@
+characters_counter = {}
+
+incoming_text = [char for char in input() if char != " "]
+
+for character in incoming_text:
+    if character not in characters_counter.keys():
+        characters_counter[character] = 0
+    characters_counter[character] += 1
+
+for char, number in characters_counter.items():
+    print(f"{char} -> {number}")
