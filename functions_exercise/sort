@@ -1,0 +1,6 @@
+def sorting_function(numbers):
+    numbers_as_digits = [int(num) for num in numbers_as_string]
+    new_list = sorted(numbers_as_digits)
+    return new_list
+numbers_as_string = list(input().split())
+print(sorting_function(numbers_as_string))
