@@ -1,0 +1,13 @@
+def characters_in_range(char1, char2):
+    all_chars = []
+    for i in range(ord(char1) + 1, ord(char2)):
+        i = chr(i)
+        all_chars.append(i)
+    return all_chars
+
+first_character = input()
+second_character = input()
+
+searched_characters = characters_in_range(first_character, second_character)
+
+print(" ".join(searched_characters))
