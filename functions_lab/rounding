@@ -1,0 +1,9 @@
+def rounding_function (number):
+    rounded_numbers = [round(float(num)) for num in number.split()]
+    return rounded_numbers
+
+input_number = input()
+
+list_of_rounded_numbers = rounding_function(input_number)
+
+print(list_of_rounded_numbers)
