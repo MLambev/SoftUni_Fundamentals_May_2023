@@ -1,0 +1,8 @@
+starting_message = input()
+crypto_message = ''
+
+for char in starting_message:
+    char = chr(ord(char) + 3)
+    crypto_message += char
+
+print(crypto_message)
