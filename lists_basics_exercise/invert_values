@@ -1,0 +1,8 @@
+starting_list = input().split(" ")
+finished_list = []
+
+for number in starting_list:
+    number = -int(number)
+    finished_list.append(number)
+
+print(finished_list)
