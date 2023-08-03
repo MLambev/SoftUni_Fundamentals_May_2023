@@ -1,0 +1,14 @@
+string_of_numbers = input().split(" ")
+count_to_remove = int(input())
+
+list_of_numbers = list(map(int, string_of_numbers))
+
+smallest_numbers = []
+
+for _ in range(count_to_remove):
+
+    smallest_numbers.append(min(list_of_numbers))
+    list_of_numbers.remove(min(list_of_numbers))
+
+
+print(", " .join(map(str, list_of_numbers)))
