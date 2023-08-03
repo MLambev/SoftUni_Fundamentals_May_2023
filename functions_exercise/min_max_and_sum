@@ -1,0 +1,18 @@
+def minimum_number(numbers):
+    min_number = min(numbers)
+    return min_number
+
+def maximum_number(numbers):
+    max_number = max(numbers)
+    return max_number
+
+def sum_of_numbers(numbers):
+    sum_number = sum(numbers)
+    return sum_number
+
+numbers_as_string = input().split()
+numbers_as_digits = [int(num) for num in numbers_as_string]
+
+print(f"The minimum number is {minimum_number(numbers_as_digits)}")
+print(f"The maximum number is {maximum_number(numbers_as_digits)}")
+print(f"The sum number is: {sum_of_numbers(numbers_as_digits)}")
