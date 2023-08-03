@@ -1,0 +1,30 @@
+def multiply (num1, num2):
+    result = num1 * num2
+    return result
+
+def divide (num1, num2):
+    result = num1 // num2
+    return result
+
+def add (num1, num2):
+    result = num1 + num2
+    return result
+
+def subtract (num1, num2):
+    result = num1 - num2
+    return result
+
+mathematical_operator = input()
+num1 = int(input())
+num2 = int(input())
+
+if mathematical_operator == "multiply":
+    result = multiply(num1, num2)
+elif mathematical_operator == "divide":
+    result = divide(num1, num2)
+elif mathematical_operator == "add":
+    result = add(num1, num2)
+elif mathematical_operator == "subtract":
+    result = subtract(num1, num2)
+
+print(result)
