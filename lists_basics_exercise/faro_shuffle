@@ -1,0 +1,16 @@
+starting_deck = input().split(" ")
+count_of_faro_shuffles = int(input())
+
+for shuffle in range (count_of_faro_shuffles):
+    final_deck = []
+    middle_of_the_deck = len(starting_deck) // 2
+    left_deck = starting_deck[0:middle_of_the_deck]
+    right_deck = starting_deck[middle_of_the_deck:]
+
+    for card in range(len(right_deck)):
+        final_deck.append(left_deck[card])
+        final_deck.append(right_deck[card])
+
+    starting_deck = final_deck
+
+print(final_deck)
