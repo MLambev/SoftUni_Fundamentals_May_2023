@@ -1,0 +1,29 @@
+def coffee_price (quantity):
+    result = quantity * 1.50
+    return result
+
+def water_price (quantity):
+    result = quantity * 1.00
+    return result
+
+def coke_price (quantity):
+    result = quantity * 1.40
+    return result
+
+def snacks_price (quantity):
+    result = quantity * 2.00
+    return result
+
+ordered_product = input()
+quantity_of_order = int(input())
+
+if ordered_product == "coffee":
+    price = coffee_price(quantity_of_order)
+elif ordered_product == "water":
+    price = water_price(quantity_of_order)
+elif ordered_product == "coke":
+    price = coke_price(quantity_of_order)
+elif ordered_product == "snacks":
+    price = snacks_price(quantity_of_order)
+
+print(f"{price:.2f}")
