@@ -1,0 +1,11 @@
+gifts = input().split()
+
+while command != "No Money":
+    command = input().split()
+
+    if command[0] == 'OutOfStock':
+        pass
+    elif command[0] == "Required":
+        pass
+    elif command[0] == "JustInCase":
+        pass
