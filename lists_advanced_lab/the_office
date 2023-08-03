@@ -1,0 +1,15 @@
+employees_happiness = input().split()
+improvement_factor = int(input())
+
+improved_happiness = []
+
+for i in employees_happiness:
+    improved_happiness_of_employee = int(i) * improvement_factor
+    improved_happiness.append(improved_happiness_of_employee)
+
+happy_employees = list(filter(lambda x: x >= (sum(improved_happiness) / len(improved_happiness)), improved_happiness))
+
+if len(happy_employees) >= len(improved_happiness) / 2:
+    print(f"Score: {len(happy_employees)}/{len(improved_happiness)}. Employees are happy!")
+else:
+    print(f"Score: {len(happy_employees)}/{len(improved_happiness)}. Employees are not happy!")
