@@ -1,0 +1,32 @@
+fire = input().split('#')
+starting_water = int(input())
+effort = 0
+total_fire = 0
+valid_cell = False
+saved_cells = []
+
+for cell in fire:
+    cell_value = cell.split(" = ")
+    type_of_fire = cell_value[0]
+    range_of_fire = int(cell_value[1])
+
+    if type_of_fire == 'High' and 81 <= range_of_fire <= 125:
+        valid_cell = True
+    elif type_of_fire == 'Medium' and 51 <= range_of_fire <= 80:
+        valid_cell = True
+    elif type_of_fire == 'Low' and 0 < range_of_fire <= 50:
+        valid_cell = True
+    else:
+        valid_cell = False
+
+    if valid_cell and range_of_fire <= starting_water:
+        starting_water -= range_of_fire
+        effort += 0.25 * range_of_fire
+        saved_cells.append(str(range_of_fire))
+        total_fire += range_of_fire
+
+print("Cells:")
+for save_cell in saved_cells:
+    print(f"- {save_cell}")
+print(f"Effort: {effort:.2f}")
+print(f"Total Fire: {total_fire}")
