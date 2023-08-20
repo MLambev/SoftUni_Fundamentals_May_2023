@@ -1,0 +1,46 @@
+items = input().split('|')
+budget = float(input())
+
+train_ticket = 150
+clothes_limit_price = 50.00
+shoes_limit_price = 35.00
+accessories_limit_price = 20.50
+new_prices = []
+sum_of_new_prices = 0
+profit = 0
+
+for item in items:
+    item_characteristics = item.split('->')
+    item_type = item_characteristics[0]
+    item_price = float(item_characteristics[1])
+
+    if budget >= item_price:
+        if item_type == 'Clothes':
+            if item_price <= clothes_limit_price:
+                budget -= item_price
+                new_item_price = item_price * 1.4
+                new_prices.append(new_item_price)
+                profit += new_item_price - item_price
+        elif item_type == 'Shoes':
+            if item_price <= shoes_limit_price:
+                budget -= item_price
+                new_item_price = item_price * 1.4
+                new_prices.append(new_item_price)
+                profit += new_item_price - item_price
+        elif item_type == 'Accessories':
+            if item_price <= accessories_limit_price:
+                budget -= item_price
+                new_item_price = item_price * 1.4
+                new_prices.append(new_item_price)
+                profit += new_item_price - item_price
+
+for price in new_prices:
+    print(f"{price:.2f}", end=" ")
+    sum_of_new_prices += price
+print()
+print(f"Profit: {profit:.2f}")
+
+if budget + sum_of_new_prices >= train_ticket:
+    print("Hello, France!")
+else:
+    print("Not enough money.")
